@@ -1,0 +1,980 @@
+echo "# GHOST-Blog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MuhammadDelaware/GHOST-Blog.git
+git push -u origin main
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Quadia Ameen",
+  "alternateName": "BLOOM with Quadia",
+  "description": "Guiding high-achieving Black women from survival mode to sustainable softness through nervous system regulation and rest rituals.",
+  "url": "https://bloomwithquadia.com",
+  "sameAs": [
+    "https://instagram.com/bloomwithquadia",
+    "https://instagram.com/withlovequadia",
+    "https://tiktok.com/@bloomwithquadia"
+  ],
+  "knowsAbout": [
+    "nervous system regulation",
+    "Black women wellness",
+    "burnout recovery",
+    "rest rituals",
+    "Strong Black Woman schema"
+  ]
+}
+</script>
+
+
+
+<style>
+
+  /* =========================================================
+   MOBILE NAV: remove dots + remove scroll indicator
+   and force the top navigation links to show on mobile
+   (Edition theme)
+   Paste BELOW your existing CSS
+   ========================================================= */
+
+/* 1) Remove the bottom scroll indicator entirely */
+.home-template .gh-cover-scroll,
+.home-template .gh-hero-scroll,
+.home-template .gh-cover [class*="scroll"],
+.home-template .gh-hero [class*="scroll"]{
+  display: none !important;
+}
+
+/* 2) Remove the top-right dot buttons (burger / secondary icon) */
+@media (max-width: 768px){
+  .gh-head .gh-burger,
+  .gh-head button.gh-burger,
+  .gh-head .gh-head-actions .gh-search,
+  .gh-head .gh-head-actions .gh-head-btn,
+  .gh-head .gh-head-actions button,
+  .gh-head .gh-head-actions a[aria-label*="Search"],
+  .gh-head .gh-head-actions a[aria-label*="search"],
+  .gh-head .gh-head-actions button[aria-label*="Search"],
+  .gh-head .gh-head-actions button[aria-label*="search"]{
+    display: none !important;
+  }
+}
+
+/* 3) Add back the navigation pane (About / Resources / Meet Quadia) on mobile */
+@media (max-width: 768px){
+  /* show the menu links */
+  .gh-head-menu{
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* keep them in a single row and readable */
+  .gh-head-menu ul{
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .gh-head-menu li{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* tighten link styling for small screens */
+  .gh-head-menu a{
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.6px !important;
+    border-radius: 999px !important;
+  }
+
+  /* hide Subscribe / Sign in so nav links have room */
+  .gh-head-actions,
+  .gh-head .gh-head-actions{
+    display: none !important;
+  }
+}
+
+/* 4) Optional: if nav gets clipped, let the header wrap cleanly */
+@media (max-width: 768px){
+  .gh-head-inner{
+    align-items: center !important;
+  }
+}
+
+
+/* ========================================
+   BLOOM BRAND COLORS
+   ======================================== */
+:root {
+  --bloom-coral: #D4917E;
+  --bloom-peach: #E8B4A8;
+  --bloom-cream: #FBF7F4;
+  --bloom-charcoal: #2D2D2D;
+  --bloom-gray: #666666;
+}
+
+/* ========================================
+   GLOBAL BACKGROUND
+   ======================================== */
+body,
+.gh-canvas {
+  background-color: var(--bloom-cream);
+  color: var(--bloom-charcoal);
+}
+
+/* ========================================
+   HEADER / NAVIGATION (Edition)
+   ======================================== */
+.gh-head {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 0;
+  box-shadow: 0 0 0 rgba(45, 45, 45, 0.05);
+  border-top: 8px solid var(--bloom-cream);
+}
+
+.gh-head-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--bloom-charcoal);
+}
+
+.gh-head-menu a {
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bloom-gray);
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.gh-head-menu a:hover,
+.gh-head-menu a.active {
+  background-color: var(--bloom-cream);
+  color: var(--bloom-coral);
+}
+
+/* ========================================
+   MOBILE HEADER ICONS: KEEP SEARCH, REMOVE MENU
+   ======================================== */
+@media (max-width: 768px) {
+  /* Hide the menu/burger button (the extra circle) */
+  .gh-head .gh-burger,
+  .gh-head button[aria-label*="Menu"],
+  .gh-head button[aria-label*="menu"] {
+    display: none !important;
+  }
+
+  /* Style SEARCH so it’s not a “pink dot” */
+  .gh-head .gh-search,
+  .gh-head [data-ghost-search],
+  .gh-head button[aria-label*="Search"],
+  .gh-head button[aria-label*="search"] {
+    background: rgba(251, 247, 244, 0.60) !important; /* cream glass */
+    border: 1px solid rgba(212, 145, 126, 0.35) !important;
+    border-radius: 999px !important;
+    width: 40px !important;
+    height: 40px !important;
+    backdrop-filter: blur(4px);
+  }
+
+  .gh-head .gh-search svg,
+  .gh-head button svg {
+    fill: var(--bloom-charcoal) !important;
+    opacity: 0.85;
+  }
+}
+
+/* ========================================
+   HOME HERO: WARMTH FIX (Edition)
+   ======================================== */
+
+/* Overlay on cover image */
+.home-template .is-cover::before {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 18, 16, 0.62) 0%,
+    rgba(20, 18, 16, 0.42) 45%,
+    rgba(20, 18, 16, 0.18) 100%
+  ) !important;
+}
+
+/* Left align on desktop */
+.home-template .gh-cover-content,
+.home-template .gh-hero-content,
+.home-template .gh-header-inner {
+  text-align: left !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding-left: clamp(20px, 4vw, 64px) !important;
+}
+
+/* Headline hierarchy */
+.home-template .gh-cover h1,
+.home-template .gh-hero h1,
+.home-template .gh-header h1 {
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  font-size: clamp(38px, 5vw, 64px) !important;
+  line-height: 1.02 !important;
+}
+
+/* Subheadline */
+.home-template .gh-cover p,
+.home-template .gh-hero p,
+.home-template .gh-header p {
+  max-width: 720px !important;
+  font-size: clamp(16px, 1.4vw, 20px) !important;
+  line-height: 1.45 !important;
+  opacity: 0.95 !important;
+}
+
+/* Mobile: center */
+@media (max-width: 768px) {
+  .home-template .gh-cover-content,
+  .home-template .gh-hero-content,
+  .home-template .gh-header-inner {
+    text-align: center !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* ========================================
+   HOME HERO EMAIL FORM: REMOVE WHITE LOOK
+   ======================================== */
+.home-template input[type="email"],
+.home-template .gh-form input,
+.home-template form input[type="email"] {
+  background: rgba(251, 247, 244, 0.65) !important;
+  border: 1px solid rgba(212, 145, 126, 0.45) !important;
+  color: var(--bloom-charcoal) !important;
+  border-radius: 999px !important;
+  backdrop-filter: blur(3px);
+}
+
+.home-template input[type="email"]::placeholder {
+  color: rgba(45, 45, 45, 0.7) !important;
+}
+
+/* Button */
+.home-template button,
+.home-template .gh-btn,
+.home-template .button {
+  background: var(--bloom-coral) !important;
+  color: var(--bloom-cream) !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  padding: 12px 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+/* ========================================
+   BLOG TYPOGRAPHY & SPACING
+   ======================================== */
+.kg-content,
+.gh-content {
+  font-family: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--bloom-charcoal);
+}
+
+.kg-content p,
+.kg-content li {
+  margin-bottom: 0.9em !important;
+  line-height: 1.45 !important;
+}
+
+.kg-content h1,
+.kg-content h2,
+.kg-content h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.kg-content h1,
+.kg-content h2 {
+  margin-top: 1.6em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.kg-content h3 {
+  margin-top: 1.2em !important;
+  margin-bottom: 0.4em !important;
+}
+
+.kg-content h1 + p,
+.kg-content h2 + p,
+.kg-content h3 + p {
+  margin-top: 0.2em !important;
+}
+
+.kg-content .kg-card {
+  margin: 1.2em 0 !important;
+}
+
+/* ========================================
+   PULLOUT QUOTES (Blockquote card)
+   ======================================== */
+.gh-main .kg-content blockquote,
+.gh-main .kg-content .kg-blockquote {
+  background: linear-gradient(135deg, var(--bloom-cream) 0%, var(--bloom-peach) 100%) !important;
+  border-left: 4px solid var(--bloom-coral) !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-style: italic !important;
+  color: var(--bloom-charcoal) !important;
+}
+
+.gh-main .kg-content blockquote p,
+.gh-main .kg-content .kg-blockquote p {
+  margin: 0 !important;
+}
+
+/* ========================================
+   CALLOUT BOXES (Callout card)
+   ======================================== */
+.gh-main .kg-content .kg-callout-card {
+  background: linear-gradient(135deg, var(--bloom-cream) 0%, rgba(232,180,168,0.55) 100%) !important;
+  border: 1px solid rgba(212,145,126,0.35) !important;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 1.6rem 0 !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04) !important;
+}
+
+.gh-main .kg-content .kg-callout-card * {
+  color: var(--bloom-charcoal) !important;
+}
+
+.gh-main .kg-content .kg-callout-card .kg-callout-text {
+  font-family: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  line-height: 1.45 !important;
+}
+
+.gh-main .kg-content .kg-callout-card .kg-callout-emoji {
+  font-size: 1.25rem !important;
+}
+
+/* ========================================
+   MOBILE TIGHTENING
+   ======================================== */
+@media (max-width: 768px) {
+  .kg-content p,
+  .kg-content li {
+    margin-bottom: 0.75em !important;
+    line-height: 1.4 !important;
+  }
+
+  .kg-content h1,
+  .kg-content h2 {
+    margin-top: 1.3em !important;
+    margin-bottom: 0.45em !important;
+  }
+
+  .kg-content h3 {
+    margin-top: 1.1em !important;
+    margin-bottom: 0.35em !important;
+  }
+
+  .gh-main .kg-content blockquote,
+  .gh-main .kg-content .kg-blockquote {
+    padding: 1rem 1.1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  .gh-main .kg-content .kg-callout-card {
+    padding: 1rem 1.1rem !important;
+    margin: 1.1rem 0 !important;
+  }
+}
+
+  /* ================================
+   MOBILE: REMOVE SEARCH ICON ONLY
+   keep the navigation menu
+   ================================ */
+@media (max-width: 768px){
+
+  /* Hide Search trigger (magnifier / circle button) */
+  .gh-head .gh-search,
+  .gh-head a.gh-search,
+  .gh-head button.gh-search,
+  .gh-head .gh-head-search,
+  .gh-head [data-ghost-search],
+  .gh-head [aria-label*="Search"],
+  .gh-head [aria-label*="search"]{
+    display: none !important;
+  }
+
+  /* Make sure the MENU trigger exists */
+  .gh-head .gh-burger,
+  .gh-head button.gh-burger,
+  .gh-head [aria-label*="Menu"],
+  .gh-head [aria-label*="menu"]{
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+/* ================================
+   REMOVE HERO SCROLL INDICATOR
+   ================================ */
+.home-template .gh-cover-scroll,
+.home-template .gh-hero-scroll,
+.home-template .gh-cover [class*="scroll"],
+.home-template .gh-hero [class*="scroll"]{
+  display: none !important;
+}
+
+/* =========================================================
+   1) HOME HERO: REMOVE THE BOTTOM “HAMBURGER” (SCROLL INDICATOR)
+   ========================================================= */
+.home-template .gh-cover .gh-cover-arrow,
+.home-template .gh-cover .gh-scroll,
+.home-template .gh-cover [class*="scroll"],
+.home-template .gh-cover [class*="arrow"] {
+  display: none !important;
+}
+
+/* =========================================================
+   2) MOBILE HEADER: MAKE THE TWO “DOTS” EVEN + CLEAN
+   (These are Search + Menu buttons)
+   ========================================================= */
+
+/* Make the two buttons the same size and aligned */
+@media (max-width: 768px) {
+  .gh-head .gh-head-actions,
+  .gh-head .gh-head-actions-list {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  /* Targets common Edition action buttons (search + burger/menu) */
+  .gh-head .gh-head-actions a,
+  .gh-head .gh-head-actions button,
+  .gh-head .gh-search,
+  .gh-head .gh-burger {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    border-radius: 999px !important;
+    background: rgba(212,145,126,0.35) !important; /* BLOOM coral tint */
+    border: 1px solid rgba(212,145,126,0.35) !important;
+    backdrop-filter: blur(6px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10) !important;
+  }
+
+  /* Ensure the “lines” inside the burger don’t look off-center */
+  .gh-head .gh-burger-box,
+  .gh-head .gh-burger-inner {
+    transform: none !important;
+  }
+}
+
+/* If you want “less dot” and more modern: remove the circle fill */
+@media (max-width: 768px) {
+  .gh-head.is-minimal .gh-search,
+  .gh-head.is-minimal .gh-burger {
+    background: transparent !important;
+    border: 1px solid rgba(251,247,244,0.45) !important;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================================================
+   3) MOBILE MENU OVERLAY: MAKE PAGE 2 MORE MODERN / UX-FRIENDLY
+   ========================================================= */
+
+/* Ghost themes toggle an “open” state with one of these.
+   We style all common variants so it works without you hunting class names. */
+@media (max-width: 768px) {
+  body.gh-head-open .gh-head,
+  .gh-head.gh-head-open,
+  .gh-head.is-open,
+  .gh-head[aria-expanded="true"] {
+    background: rgba(212,145,126,0.92) !important; /* BLOOM coral wash */
+    backdrop-filter: blur(10px) !important;
+  }
+
+  /* Center menu links but keep spacing tight and intentional */
+  body.gh-head-open .gh-head-menu,
+  .gh-head.gh-head-open .gh-head-menu,
+  .gh-head.is-open .gh-head-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    padding: 22vh 0 18vh !important;
+  }
+
+  /* Make items feel tappable */
+  body.gh-head-open .gh-head-menu a,
+  .gh-head.gh-head-open .gh-head-menu a,
+  .gh-head.is-open .gh-head-menu a {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    font-size: 30px !important;
+    color: ##FBF7F4 !important;
+    padding: 12px 18px !important;
+    border-radius: 999px !important;
+    background: rgba(251,247,244,0.14) !important;
+    border: 1px solid rgba(251,247,244,0.18) !important;
+  }
+
+  /* Make the close “X” cleaner */
+  body.gh-head-open .gh-burger,
+  .gh-head.gh-head-open .gh-burger,
+  .gh-head.is-open .gh-burger {
+    background: rgba(251,247,244,0.18) !important;
+    border: 1px solid rgba(251,247,244,0.22) !important;
+  }
+}
+
+/* =========================================================
+   4) CAROUSEL CONTROLS: ADD ARROWS SO IT’S OBVIOUS YOU CAN SWIPE
+   (Targets common slider libs: Swiper + Flickity + Ghost gallery)
+   ========================================================= */
+
+/* Swiper arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 999px !important;
+  background: rgba(212,145,126,0.28) !important;
+  border: 1px solid rgba(212,145,126,0.30) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #FBF7F4 !important;
+}
+
+.swiper-button-prev:after { content: "‹" !important; }
+.swiper-button-next:after { content: "›" !important; }
+
+/* Flickity arrows */
+.flickity-button {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 999px !important;
+  background: rgba(212,145,126,0.28) !important;
+  border: 1px solid rgba(212,145,126,0.30) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+.flickity-button-icon {
+  fill: #FBF7F4 !important;
+}
+
+/* If those top-right “two circles” are slider dots, tighten them */
+.flickity-page-dots .dot,
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 0.45 !important;
+  background: rgba(212,145,126,0.85) !important;
+}
+.flickity-page-dots .dot.is-selected,
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+  /* =========================================================
+   1) REMOVE HERO "SCROLL DOWN" BUTTON (big dot at bottom)
+   ========================================================= */
+.home-template .gh-cover .gh-cover-arrow,
+.home-template .gh-cover .gh-cover-scroll,
+.home-template .gh-cover [class*="scroll"],
+.home-template .gh-cover button[aria-label*="Scroll"],
+.home-template .gh-cover a[aria-label*="Scroll"]{
+  display: none !important;
+}
+
+/* =========================================================
+   2) SWIPER "DOTS" → 3 EVEN BARS (pagination)
+   ========================================================= */
+
+/* hide the default circles */
+.swiper-pagination-bullet{
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 6px !important;
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+/* draw bar */
+.swiper-pagination-bullet::after{
+  content: "" !important;
+  display: block !important;
+  width: 22px !important;
+  height: 3px !important;
+  border-radius: 999px !important;
+  background: rgba(251, 247, 244, 0.55) !important; /* bloom cream glass */
+  border: 1px solid rgba(212, 145, 126, 0.35) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* active bar */
+.swiper-pagination-bullet-active::after{
+  background: rgba(212, 145, 126, 0.95) !important; /* bloom coral */
+  border-color: rgba(212, 145, 126, 0.95) !important;
+}
+
+/* =========================================================
+   3) SHOW LEFT/RIGHT ARROWS INSTEAD (for swipe carousels)
+   ========================================================= */
+.swiper-button-prev,
+.swiper-button-next{
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 999px !important;
+  background: rgba(251, 247, 244, 0.70) !important; /* bloom cream glass */
+  border: 1px solid rgba(212, 145, 126, 0.35) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Make the arrow glyphs visible + BLOOM-coded */
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  font-size: 16px !important;
+  color: #2D2D2D !important;
+  font-weight: 900 !important;
+}
+
+/* Position arrows a little nicer on mobile */
+@media (max-width: 768px){
+  .swiper-button-prev{ left: 10px !important; }
+  .swiper-button-next{ right: 10px !important; }
+}
+
+/* =========================================================
+   4) REMOVE THE PINK CIRCLE BEHIND THE HAMBURGER (keep hamburger)
+   ========================================================= */
+.gh-burger,
+.gh-head .gh-burger{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.gh-burger:hover,
+.gh-head .gh-burger:hover{
+  background: rgba(251, 247, 244, 0.25) !important; /* subtle hover */
+}
+
+/* =========================================================
+   5) MOBILE MENU: MOVE NAV LINKS UP (not centered)
+   ========================================================= */
+.gh-head-open .gh-head-menu,
+.gh-head-open .gh-head-menu .nav{
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.gh-head-open .gh-head-menu{
+  padding-top: 96px !important; /* pushes links toward the top */
+}
+
+/* Optional: make those menu links feel more "UX modern" */
+.gh-head-open .gh-head-menu a{
+  font-size: 16px !important;
+  letter-spacing: 0.6px !important;
+  padding: 12px 18px !important;
+  border-radius: 14px !important;
+}
+
+/* ========================================
+   NEWSLETTER SUBSCRIBE FORMS
+   ======================================== */
+
+.subscribe-form,
+.kg-signup-card {
+  background: linear-gradient(135deg, var(--bloom-peach) 0%, var(--bloom-coral) 100%);
+  padding: 60px 50px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 60px 0;
+  box-shadow: 0 12px 40px rgba(212, 145, 126, 0.35);
+}
+
+.subscribe-form h3,
+.kg-signup-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.subscribe-form p,
+.kg-signup-subheading {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.subscribe-form input,
+.kg-signup-card input {
+  border: none !important;
+  background: white !important;
+  padding: 18px 25px !important;
+  border-radius: 30px !important;
+  font-size: 16px !important;
+  width: 350px !important;
+  max-width: 100% !important;
+  margin-right: 15px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-form button,
+.kg-signup-card button {
+  background: white !important;
+  color: var(--bloom-coral) !important;
+  padding: 18px 45px !important;
+  border-radius: 30px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-form button:hover,
+.kg-signup-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   AUTHOR CARD
+   ======================================== */
+
+.author-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 80px 0 60px;
+  box-shadow: 0 10px 40px rgba(212, 145, 126, 0.2);
+  border-top: 4px solid var(--bloom-coral);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  border: 5px solid var(--bloom-peach);
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  color: var(--bloom-charcoal);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.author-bio {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  color: var(--bloom-gray);
+  line-height: 1.7;
+}
+
+/* ========================================
+   TAG STYLING
+   ======================================== */
+
+.post-card-tags a,
+.article-tag a {
+  background: var(--bloom-cream);
+  color: var(--bloom-coral);
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.post-card-tags a:hover,
+.article-tag a:hover {
+  background: var(--bloom-coral);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   FOOTER STYLING
+   ======================================== */
+
+.gh-foot {
+  background: var(--bloom-charcoal);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 60px 0 40px;
+  margin-top: 100px;
+}
+
+.gh-foot a {
+  color: var(--bloom-peach);
+  transition: color 0.2s ease;
+}
+
+.gh-foot a:hover {
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+  .gh-cover-title {
+    font-size: 42px;
+  }
+  
+  .article-title {
+    font-size: 36px;
+  }
+  
+  .post-card-title {
+    font-size: 22px;
+  }
+  
+  .author-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .gh-content blockquote {
+    padding: 30px 25px;
+    font-size: 20px;
+  }
+}
+
+  /* =========================================================
+   SECTION 2 — MOBILE NAV OVERLAY (Edition theme)
+   Goal: move menu links UP, make overlay feel intentional,
+   remove the weird floating dot behind "Sign in"
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* 1) When the menu is open, use a cleaner full-screen panel */
+  .gh-head.gh-head-open,
+  .gh-head.gh-head-open .gh-head-inner {
+    background: linear-gradient(180deg, rgba(212,145,126,0.98) 0%, rgba(232,180,168,0.98) 100%) !important;
+  }
+
+  /* 2) Move nav links toward the top (not centered mid-screen) */
+  .gh-head.gh-head-open .gh-head-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding-top: 96px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    gap: 18px !important;
+    text-align: left !important;
+  }
+
+  /* 3) Make the menu links look like a real mobile nav */
+  .gh-head.gh-head-open .gh-head-menu a {
+    display: block !important;
+    width: 100% !important;
+    font-size: 18px !important;
+    letter-spacing: 0.5px !important;
+    text-transform: none !important;
+    color: rgba(255,255,255,0.95) !important;
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+    background: rgba(255,255,255,0.10) !important;
+    border: 1px solid rgba(255,255,255,0.14) !important;
+  }
+
+  .gh-head.gh-head-open .gh-head-menu a:hover,
+  .gh-head.gh-head-open .gh-head-menu a:focus {
+    background: rgba(255,255,255,0.16) !important;
+    border-color: rgba(255,255,255,0.22) !important;
+  }
+
+  /* 4) Push Sign in / Subscribe area down but keep it clean */
+  .gh-head.gh-head-open .gh-head-actions {
+    margin-top: auto !important;
+    padding: 22px 24px 34px !important;
+  }
+
+  /* 5) Remove the weird circular “dot” styling behind Sign in */
+  .gh-head.gh-head-open .gh-head-actions a,
+  .gh-head.gh-head-open .gh-head-actions .gh-btn,
+  .gh-head.gh-head-open .gh-head-actions .gh-head-button {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* 6) Optional: add a subtle top “brand image” area (works if you set a background image) */
+  .gh-head.gh-head-open .gh-head-inner::before {
+    content: "";
+    display: block;
+    height: 72px;
+    margin: 18px 24px 0;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.14);
+
+    /* If you want a photo here later, replace the two lines below:
+       background-image: url('YOUR_IMAGE_URL');
+       background-size: cover; background-position: center;
+    */
+  }
+}
+
+
+</style>
